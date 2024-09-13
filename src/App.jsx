@@ -14,9 +14,10 @@ function App() {
 
   return (
     <>
-        <div className="banner"><Banner></Banner></div>
+        
     <Header></Header>
-
+    <div className="tittle-container"><h1 className="tittle">BANNER</h1></div>
+    <div className="banner"><Banner></Banner></div>
     <div className="footer">
       <Footer></Footer>
     </div>
