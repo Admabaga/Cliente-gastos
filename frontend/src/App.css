@@ -1,0 +1,16 @@
+.formulario{
+  width: 450px;
+  display: inline-block;
+  justify-content: center;
+  padding: 10px;
+}
+.form-floating{
+  margin: 13px;
+  width: 90%;
+}
+.btn.btn-outline-secondary{
+  margin-top: 5px;
+  padding: 10px 20px;
+  width: 90%;
+  margin-left: 13px;
+}
