@@ -5,7 +5,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import FormularioIngresos from '../Componentes/FormularioLogin'
 import FormularioRegistro from '../Componentes/FormularioRegistro'
 import FormularioCategoria from '../Componentes/FormularioCategoria'
-import FormularioGasto from '../Componentes/FormularioGasto'
+import FormularioGastos from '../Componentes/FormularioGasto'
 
 function header(){
   const [mostrarMain, setMostrarMain] = useState('')
@@ -34,7 +34,7 @@ function header(){
             <Nav.Link href="#features" onClick={cambiarARegistro}>Register</Nav.Link>
             <Nav.Link onClick={cambiarAIngresos}>Ingresos</Nav.Link>
             <Nav.Link onClick={cambiarACategorias}>Categorias</Nav.Link>
-            <Nav.Link onClick={cambiarAIngresos}>Gastos</Nav.Link>
+            <Nav.Link onClick={cambiarAGasto}>Gastos</Nav.Link>
             <Nav.Link href="#pricing">About us</Nav.Link>
 
           </Nav>
@@ -44,7 +44,7 @@ function header(){
         {mostrarMain === 'registro' && <FormularioRegistro></FormularioRegistro>}
         {mostrarMain === 'ingreso' && <FormularioIngresos></FormularioIngresos>}
         {mostrarMain === 'categoria' && <FormularioCategoria></FormularioCategoria>}
-        {mostrarMain === 'gasto' && <FormularioGasto></FormularioGasto>}
+        {mostrarMain === 'gasto' && <FormularioGastos></FormularioGastos>}
       </section>
     </>
   );
