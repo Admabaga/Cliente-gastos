@@ -7,7 +7,6 @@ function FormularioRegistro() {
     <section className='formulario'>
       <Form.Floating >
         <Form.Control
-          id="floatingInputCustom"
           type="text"
           placeholder="name"
         />
@@ -16,7 +15,6 @@ function FormularioRegistro() {
 
       <Form.Floating >
         <Form.Control
-          id="floatingInputCustom"
           type="number"
           placeholder="12345"
         />
@@ -25,7 +23,6 @@ function FormularioRegistro() {
 
       <Form.Floating >
         <Form.Control
-          id="floatingInputCustom"
           type="email"
           placeholder="name@example.com"
         />
@@ -34,7 +31,6 @@ function FormularioRegistro() {
 
       <Form.Floating >
         <Form.Control
-          id="floatingInputCustom"
           type="number"
           placeholder="name@example.com"
         />
@@ -43,7 +39,6 @@ function FormularioRegistro() {
 
       <Form.Floating >
         <Form.Control
-          id="floatingInputCustom"
           type="text"
           placeholder="name"
         />
@@ -52,7 +47,6 @@ function FormularioRegistro() {
 
       <Form.Floating>
         <Form.Control
-          id="floatingPasswordCustom"
           type="password"
           placeholder="Password:"
         />

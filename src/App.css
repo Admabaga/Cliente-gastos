@@ -14,6 +14,7 @@
   width: 90%;
   margin-left: 13px;
 }
+
 @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
 
 body
@@ -32,7 +33,7 @@ body
 }
 section{
     display: flex;
-    width: 600px;
+    width: 100%;
     height: 430px;
 }
 section img{
@@ -50,14 +51,7 @@ section img:hover
     filter: contrast(120%);
 
 }
-.Banner
-{
-    min-height: 100%;
-    display: flex;
-    margin: bottom 50px;
-    justify-content: center;
-    align-items: center;
-}
+
 .content
 {
     height: 200px;
@@ -69,4 +63,11 @@ section img:hover
 p{
     color: black;
     font-size: 20px;
+}
+.mainInfo{
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 15px;
+    padding: 15px;
 }

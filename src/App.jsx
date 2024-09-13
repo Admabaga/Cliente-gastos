@@ -14,21 +14,13 @@ function App() {
 
   return (
     <>
+        <div className="banner"><Banner></Banner></div>
     <Header></Header>
 
-    <div className="form">
-    <FormularioCategoria></FormularioCategoria>
-      <FormularioGastos></FormularioGastos>
-      <FormularioIngresos></FormularioIngresos>
-      <FormularioRegistro></FormularioRegistro>
-    </div>  
-
-    <div className="banner"><Banner></Banner></div>
     <div className="footer">
       <Footer></Footer>
     </div>
     </>
-    
   )
 }
 
