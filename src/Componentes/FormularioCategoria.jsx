@@ -11,7 +11,7 @@ function FormularioCategoria() {
           type="text"
           placeholder="name"
         />
-        <label htmlFor="floatingInputCustom">Ingresa el nombre:</label>
+        <label htmlFor="floatingInputCustom">Nombre:</label>
       </Form.Floating>
       <Form.Floating >
       <Form.Group controlId="formFile" className="mb-3">

@@ -1,14 +1,14 @@
 import { useState } from 'react'
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import FormularioRegistro from './Componentes/FormularioRegistro'
-import FormularioGastos from './Componentes/FormularioGasto'
-import FormularioIngresos from './Componentes/FormularioLogin'
 import FormularioCategoria from './Componentes/FormularioCategoria'
 import NavBar from './Header/Nav.jsx'
 import Banner from './Banner/Banner.jsx'
 import Footer from './Footer/Footer.jsx'
 import { BrowserRouter, Routes , Route } from 'react-router-dom'
+import UsuariosMain from './Componentes/UsuariosMain.jsx'
+import GastosMain from './Componentes/GastosMain.jsx'
+import MetodosMain from './Componentes/MetodosMain.jsx'
 
 function App() {
   return (
@@ -17,10 +17,10 @@ function App() {
     <BrowserRouter>
     <Routes>
       <Route path='/' element={<Banner/>}></Route>
-      <Route path='/registroUsuario' element={<FormularioRegistro/>}></Route>
-      <Route path='/registrarGasto' element={<FormularioGastos/>}></Route>
-      <Route path='/registrarIngreso' element={<FormularioIngresos/>}></Route>
-      <Route path='/registrarCategoria' element={<FormularioCategoria/>}></Route>
+      <Route path='/usuarios' element={<UsuariosMain/>}></Route>
+      <Route path='/gastos' element={<GastosMain/>}></Route>
+      <Route path='/metodoPagos' element={<MetodosMain/>}></Route>
+      <Route path='/categorias' element={<FormularioCategoria/>}></Route>
     </Routes>
     </BrowserRouter>
     <Footer></Footer>

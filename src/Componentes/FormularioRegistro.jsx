@@ -1,7 +1,8 @@
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
-import { useState } from 'react';
-import axios from 'axios';
+import { useState } from 'react'
+import axios from 'axios'
+import { Spinner } from 'react-bootstrap'
 
 function FormularioRegistro() {
   const [nombre, setNombreusuario] = useState('')
@@ -13,9 +14,11 @@ function FormularioRegistro() {
   const [contraseña, setPassword] = useState('')
   const [respuesta, setRespuesta] = useState('')
   const [respuestaError, setRespuestaError] = useState(false)
+  const [cargando, setCargando] = useState(false)
 
   async function handleSubmit(event) {
   event.preventDefault()
+  setCargando(true)
   try {
     const response = await axios.post('http://localhost:8000/usuarios', {
       nombre: nombre,
@@ -25,14 +28,16 @@ function FormularioRegistro() {
       ciudad: ciudad,
       fechaRegistro: fechaRegistro,
       contraseña: contraseña
-    });
-    console.log('Datos enviados con éxito:', response.data);
-    setRespuesta('Registro éxitoso!');
-    setRespuestaError(false); // No hay error, operación exitosa
+    })
+    console.log('Datos enviados con éxito:', response.data)
+    setRespuesta('Registro éxitoso!')
+    setRespuestaError(false); 
   } catch (error) {
-    console.error('Error al enviar datos:', error.response?.data || error.message);
-    setRespuesta(`Error al enviar datos: ${error.response?.data || error.message}`);
-    setRespuestaError(true); // Indicar que hubo un error
+    console.error('Error al enviar datos:', error.response?.data || error.message)
+    setRespuesta(`Error al enviar datos: ${error.response?.data || error.message}`)
+    setRespuestaError(true)
+  }finally{
+    setCargando(false)
   }
 }
 
@@ -48,7 +53,6 @@ function FormularioRegistro() {
         />
         <label htmlFor="floatingInputCustom">Nombre completo:</label>
       </Form.Floating>
-
       <Form.Floating >
         <Form.Control
           type="number"
@@ -58,7 +62,6 @@ function FormularioRegistro() {
         />
         <label htmlFor="floatingInputCustom">Edad:</label>
       </Form.Floating>
-
       <Form.Floating >
         <Form.Control
           type="email"
@@ -68,7 +71,6 @@ function FormularioRegistro() {
         />
         <label htmlFor="floatingInputCustom">Correo electronico:</label>
       </Form.Floating>
-
       <Form.Floating >
         <Form.Control
           type="number"
@@ -78,7 +80,6 @@ function FormularioRegistro() {
         />
         <label htmlFor="floatingInputCustom">Numero de contacto:</label>
       </Form.Floating>
-
       <Form.Floating >
         <Form.Control
           type="text"
@@ -88,18 +89,16 @@ function FormularioRegistro() {
         />
         <label htmlFor="floatingInputCustom">Ciudad:</label>
       </Form.Floating>
-
       <Form.Floating >
         <Form.Control
           id="floatingInputCustom"
           type="date"
           placeholder="dd/mm/yyyy"
-          value={fechaRegistro ? fechaRegistro.toISOString().split('T')[0] : ''}
+          value={fechaRegistro}
           onChange={(fecha)=>setFecha(new Date(fecha.target.value))}
         />
         <label htmlFor="floatingInputCustom">Fecha de inscripcion:</label>
       </Form.Floating>
-
       <Form.Floating>
         <Form.Control
           type="password"
@@ -110,14 +109,20 @@ function FormularioRegistro() {
         <label htmlFor="floatingPasswordCustom">Contraseña:</label>
       </Form.Floating>
       <Button variant="outline-secondary" onClick={handleSubmit}>Registrarse</Button>{' '}
+      {cargando ? (
+            <div className="spinner-container">
+                <Spinner animation="border" size="lg" />
+            </div>
+            ):(<>
       {respuesta && (
           <p className={`respuestaServer ${respuestaError ? 'error' : 'success'}`}>
             {respuesta}
           </p>
-        )}
+        )}</>
+      )}
       </section>
     </>
   )
 }
 
-export default FormularioRegistro;
+export default FormularioRegistro
