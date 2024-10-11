@@ -9,6 +9,7 @@ import { BrowserRouter, Routes , Route } from 'react-router-dom'
 import UsuariosMain from './Componentes/UsuariosMain.jsx'
 import GastosMain from './Componentes/GastosMain.jsx'
 import MetodosMain from './Componentes/MetodosMain.jsx'
+import GastoCards from './Componentes/GastoCards.jsx'
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
       <Route path='/categorias' element={<FormularioCategoria/>}></Route>
     </Routes>
     </BrowserRouter>
+    <GastoCards />
     <Footer></Footer>
     </>
   )
