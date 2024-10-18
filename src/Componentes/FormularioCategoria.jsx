@@ -4,7 +4,7 @@ import Button from 'react-bootstrap/Button'
 function FormularioCategoria() {
   return (
     <>
-    <section className='formulario'>
+    <section className='formulario p-4 border rounded'>
       <Form.Floating >
         <Form.Control
           id="floatingInputCustom"

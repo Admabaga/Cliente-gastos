@@ -24,7 +24,6 @@ function App() {
       <Route path='/categorias' element={<FormularioCategoria/>}></Route>
     </Routes>
     </BrowserRouter>
-    <GastoCards />
     <Footer></Footer>
     </>
   )

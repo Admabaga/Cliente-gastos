@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import Table from 'react-bootstrap/Table';
 import Button from 'react-bootstrap/Button'
 import Spinner from 'react-bootstrap/Spinner';
+import GastoCards from './GastoCards';
 
 export default function VerGastos() {
     const [gastos, setGastos] = useState([]);
@@ -50,28 +50,8 @@ export default function VerGastos() {
             ) : (
                 <>
                     <h2>Gastos</h2>
-                    <Table striped bordered hover>
-                        <thead>
-                            <tr>
-                                <th>#</th>
-                                <th>Nombre</th>
-                                <th>Valor</th>
-                                <th>Fecha</th>
-                                <th>Descripción</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {gastos.map((gasto, index) => (
-                                <tr key={index}>
-                                    <td>{index + 1}</td>
-                                    <td>{gasto.nombre}</td>
-                                    <td>{gasto.monto}</td>
-                                    <td>{gasto.fecha}</td>
-                                    <td>{gasto.descripcion}</td>
-                                </tr>
-                            ))}
-                        </tbody>
-                    </Table>
+                    <GastoCards gastos ={gastos}></GastoCards>
+
                     {!gastos.length && <p>No se encontraron gastos.</p>}
                 </>
             )}
