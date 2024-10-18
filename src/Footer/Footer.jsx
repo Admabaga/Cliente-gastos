@@ -13,14 +13,14 @@ const Footer = () => {
             <p>Sebastian Poveda Arias</p>
             <p>Jose Manuel Henao Rodriguez</p>
             <p>Simon Mesa Montoya</p>
-            <p>Adrian Mesa</p>
+            <p>Adrian Barrera Garcia</p>
           </Col>
           <Col md={4}>
             <h5>Información de Contacto</h5>
             <p>spovedar@cesde.net</p>
             <p>jmhenaoro@cesde.net</p>
             <p>smesamontoyasimon@cesde.net</p>
-            <p>adrianmesa@cesde.net</p>
+            <p>ambarreraga@cesde.net</p>
           </Col>
           <Col md={4}>
             <h5>Redes Sociales</h5>
