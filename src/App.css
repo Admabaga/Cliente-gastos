@@ -21,8 +21,8 @@
   background-color: #3b3b3b; 
 }
 
-.navBar .nav-link.active,
-.navBar .nav-link:focus {
+.navBar.nav-link.active,
+.navBar.nav-link:focus {
   background-color: #3b3b3b; 
   color: #faf9f9; 
   font-weight: bold;

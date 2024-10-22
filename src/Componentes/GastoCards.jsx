@@ -23,3 +23,5 @@ function GastoCards({ gasto }) {
 }
 
 export default GastoCards;
+
+

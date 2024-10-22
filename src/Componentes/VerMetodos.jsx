@@ -53,10 +53,11 @@ export default function VerMetodos(){
             ) : (
                 <>
                     <h2>Metodos de pago</h2>
+                    <div className="row m-5">
                     {metodos.map((metodo, index) => (
-                        <PagosCard key={index} metodo={metodo}></PagosCard>
+                        <PagosCard className="col-md-4 mb-4" key={index} metodo={metodo}></PagosCard>
                                  ))}
-                    
+                    </div>
                     {!metodos.length && <p>No se encontraron Metodos.</p>}
                 </>
             )}
