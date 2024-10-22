@@ -50,8 +50,9 @@ export default function VerGastos() {
             ) : (
                 <>
                     <h2>Gastos</h2>
-                    <GastoCards gastos ={gastos}></GastoCards>
-
+                    {gastos.map((gasto, index) => (
+                       <GastoCards key={index} gasto ={gasto}></GastoCards>
+                            ))}
                     {!gastos.length && <p>No se encontraron gastos.</p>}
                 </>
             )}

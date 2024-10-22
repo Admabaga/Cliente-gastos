@@ -1,13 +1,11 @@
 import './GastoCards.css';
 import facturaimg from '../assets/facturaimg.png';
 
-function GastoCards({ gastos }) {
+function GastoCards({ gasto }) {
   return (
     <section className="cards-section ">
       <div className="card-container ">
         <div className="info-container">
-          {gastos.map((gasto, index) => (
-            <div key={index}>
             <div className="img-container">
                 <img src={facturaimg} className="imageAdding" />
             </div>
@@ -18,8 +16,6 @@ function GastoCards({ gastos }) {
             <p className="fecha">{gasto.fecha}</p>
             <hr />
             <p className="descripcion">{gasto.descripcion}</p>
-            </div>
-          ))}
         </div>
       </div>
     </section>

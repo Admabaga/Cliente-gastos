@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import { Spinner } from 'react-bootstrap';
 import {Button} from 'react-bootstrap';
 import axios from 'axios';
+import PagosCard from './PagosCard';
 export default function VerMetodos(){
     
     const [metodos, setMetodos] = useState([]);
@@ -52,26 +53,10 @@ export default function VerMetodos(){
             ) : (
                 <>
                     <h2>Metodos de pago</h2>
-                    <Table striped bordered hover>
-                        <thead>
-                          <tr>
-                            <th>#</th>
-                            <th>Nombre</th>
-                            <th>Valor</th>
-                            <th>Descripcion</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          {metodos.map((metodo, index) => (
-                            <tr key={index}>
-                              <td>{index + 1}</td>
-                              <td>{metodo.nombreMetodo}</td>
-                              <td>{metodo.valor}</td> 
-                              <td>{metodo.descripcion}</td>
-                            </tr>
-                          ))}
-                        </tbody>
-                    </Table>
+                    {metodos.map((metodo, index) => (
+                        <PagosCard key={index} metodo={metodo}></PagosCard>
+                                 ))}
+                    
                     {!metodos.length && <p>No se encontraron Metodos.</p>}
                 </>
             )}
