@@ -3,7 +3,7 @@ import facturaimg from '../assets/facturaimg.png';
 
 function GastoCards({ gasto }) {
   return (
-    <section className="cards-section ">
+    <section className="cards-section h-100 ">
       <div className="card-container ">
         <div className="info-container">
             <div className="img-container">
