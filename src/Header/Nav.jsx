@@ -17,6 +17,7 @@ function NavBar(){
             <Nav.Link href="/usuarios">Usuarios</Nav.Link>
             <Nav.Link href="/metodoPagos">Metodos de pago</Nav.Link>
             <Nav.Link href="/gastos">Gastos</Nav.Link>
+            <Nav.Link href="/login">login</Nav.Link>
           </Nav>
           <Form className="d-flex">
             <Form.Control
