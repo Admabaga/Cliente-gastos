@@ -1,25 +1,27 @@
-import React, { createContext, useEffect, useState } from 'react';
+import React, { createContext, useState, useEffect } from 'react';
 
 const userContext = createContext();
 
 export const UserProvider = ({ children }) => {
-  const [cuentaId, setCuentaId] = useState("")
-
-  const storedcuentaId = JSON.parse(localStorage.getItem('cuentaId')) || cuentaId;
-  setCuentaId(storedcuentaId)
+  const [cuentaId, setCuentaId] = useState("");
 
   useEffect(() => {
-    localStorage.setItem('cuentaId', JSON.stringify(cuentaId))
-  }, [cuentaId])
+    if (cuentaId !== "") {
+      localStorage.setItem('cuentaId', JSON.stringify(cuentaId));
+    }
+  }, [cuentaId]);
 
   const actualizarCuentaId = (idActualizado) => {
-    setCuentaId(idActualizado)
-  }
+    if (idActualizado !== cuentaId) {
+      setCuentaId(idActualizado);
+    }
+  };
 
   return (
     <userContext.Provider value={{ actualizarCuentaId, cuentaId }}>
       {children}
     </userContext.Provider>
-  )
-}
-export default userContext
+  );
+};
+
+export default userContext;

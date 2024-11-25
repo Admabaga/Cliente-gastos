@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import Nav from 'react-bootstrap/Nav';
-import FormularioRegistro from './FormularioRegistro';
 import FormularioGastos from './FormularioGasto';
 import VerGastos from './VerGastos';
 

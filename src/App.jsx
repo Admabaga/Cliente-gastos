@@ -9,6 +9,7 @@ import UsuariosMain from './Componentes/UsuariosMain.jsx'
 import GastosMain from './Componentes/GastosMain.jsx'
 import MetodosMain from './Componentes/MetodosMain.jsx'
 import { UserProvider } from './Componentes/Contexto/userContext.jsx'
+import Lobby from './Componentes/lobby.jsx'
 
 function App() {
   return (
@@ -19,8 +20,9 @@ function App() {
           <Routes>
             <Route path='/' element={<Banner />}></Route>
             <Route path='/usuarios' element={<UsuariosMain />}></Route>
-            <Route path='/gastos' element={<GastosMain />}></Route>
-            <Route path='/metodoPagos' element={<MetodosMain />}></Route>
+            <Route path='/lobby/gastos' element={<GastosMain />}></Route>
+            <Route path='/lobby/metodoPagos' element={<MetodosMain />}></Route>
+            <Route path='/lobby' element={<Lobby />}></Route>
           </Routes>
         </BrowserRouter>
       </UserProvider>
