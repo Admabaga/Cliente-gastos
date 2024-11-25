@@ -16,7 +16,6 @@ function NavBar(){
             <Nav.Link href="/">Inicio</Nav.Link>
             <Nav.Link href="/usuarios">Usuarios</Nav.Link>
             <Nav.Link href="/metodoPagos">Metodos de pago</Nav.Link>
-            <Nav.Link href="/categorias">Categorias</Nav.Link>
             <Nav.Link href="/gastos">Gastos</Nav.Link>
           </Nav>
           <Form className="d-flex">

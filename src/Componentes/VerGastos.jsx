@@ -133,7 +133,7 @@ export default function VerGastos() {
             {respuesta && !respuestaError && (
                 <p className="mt-3">Respuesta del servidor: {respuesta}</p>
             )}
-            <Button variant="outline-secondary" className='refrescar' onClick={handleRefresh}>
+            <Button variant="outline-secondary" className='refrescar m-3' onClick={handleRefresh}>
                 Refrescar
             </Button>
         </div>

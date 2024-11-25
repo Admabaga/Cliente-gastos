@@ -35,6 +35,7 @@ function FormularioGastos() {
   
   return (
     <>
+    <div className="container my-5">
     <section className='formulario p-4 border rounded'>
       <Form.Floating >
         <Form.Control
@@ -87,6 +88,7 @@ function FormularioGastos() {
         )}</>
       )}
       </section>
+      </div>
     </>
   );
 }

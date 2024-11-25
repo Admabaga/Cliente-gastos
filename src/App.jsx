@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import FormularioCategoria from './Componentes/FormularioCategoria'
 import NavBar from './Header/Nav.jsx'
 import Banner from './Banner/Banner.jsx'
 import Footer from './Footer/Footer.jsx'
@@ -20,7 +19,6 @@ function App() {
       <Route path='/usuarios' element={<UsuariosMain/>}></Route>
       <Route path='/gastos' element={<GastosMain/>}></Route>
       <Route path='/metodoPagos' element={<MetodosMain/>}></Route>
-      <Route path='/categorias' element={<FormularioCategoria/>}></Route>
     </Routes>
     </BrowserRouter>
     <Footer></Footer>
