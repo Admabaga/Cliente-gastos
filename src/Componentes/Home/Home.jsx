@@ -1,7 +1,7 @@
 import React from 'react'
 import './Home.css'
 import SingIn from '../SingIn/SingIn'
-import { useState } from 'react'
+
 
 function Home() {
   return (
