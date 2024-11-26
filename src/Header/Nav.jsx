@@ -14,9 +14,7 @@ function NavBar(){
         <Navbar.Collapse id="navbarScroll">
         <Nav className="me-auto">
             <Nav.Link href="/">Inicio</Nav.Link>
-            <Nav.Link href="/usuarios">Usuarios</Nav.Link>
-            <Nav.Link href="/metodoPagos">Metodos de pago</Nav.Link>
-            <Nav.Link href="/gastos">Gastos</Nav.Link>
+            <Nav.Link href="/registro">registro</Nav.Link>
             <Nav.Link href="/login">login</Nav.Link>
           </Nav>
           <Form className="d-flex">
