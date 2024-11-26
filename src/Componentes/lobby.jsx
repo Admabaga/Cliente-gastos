@@ -1,12 +1,10 @@
-import Footer from "../Footer/Footer";
-import NavLobby from "./lobbyNav";
-
+import NavLobby from "./lobbyNav"
+import Banner from "../Banner/Banner";
 
 function Lobby (){
     return (
         <div>
-            <NavLobby />
-            <Footer />
+            <NavLobby/>
         </div>
     )
 }

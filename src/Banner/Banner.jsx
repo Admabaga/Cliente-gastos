@@ -1,6 +1,6 @@
 import './Banner.css';
 import Finanzas from '../assets/finanzas.png'
-
+import NavBar from '../Header/Nav';
 function Banner() {
     return (
         <>

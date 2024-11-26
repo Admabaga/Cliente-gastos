@@ -3,7 +3,6 @@ import Nav from 'react-bootstrap/Nav';
 import FormularioGastos from './FormularioGasto';
 import VerGastos from './VerGastos';
 
-
 function GastosMain() {
     const [infoMain, setInfoMain] = useState('')
     const cambiarMain = (valor)=>{
