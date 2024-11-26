@@ -5,8 +5,6 @@ import axios from 'axios';
 
 function Register() {
 
-    let 
-
     const [userName, setUserName] = useState('');
     const [fullName, setFullName] = useState('');
     const [password, setPassword] = useState('');

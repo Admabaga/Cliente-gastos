@@ -3,6 +3,7 @@ import Button from 'react-bootstrap/Button'
 import { useState } from 'react'
 import axios from 'axios'
 import { Spinner } from 'react-bootstrap'
+import NavBar from '../Header/Nav' 
 
 function FormularioRegistro() {
   const [nombre, setNombreusuario] = useState('')
@@ -43,6 +44,7 @@ function FormularioRegistro() {
 
   return (
     <>
+    <NavBar></NavBar>
     <div className="container my-5">
     <section className='formulario p-4 border rounded'>
       <Form.Floating >

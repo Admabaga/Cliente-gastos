@@ -1,8 +1,8 @@
-import { useState } from 'react';
-import Nav from 'react-bootstrap/Nav';
-import FormularioGastos from './FormularioGasto';
-import VerGastos from './VerGastos';
-
+import { useState } from 'react'
+import Nav from 'react-bootstrap/Nav'
+import FormularioGastos from './FormularioGasto'
+import VerGastos from './VerGastos'
+import NavLobby from './LobbyNav'
 
 function GastosMain() {
     const [infoMain, setInfoMain] = useState('')
@@ -11,6 +11,7 @@ function GastosMain() {
     }
   return (
     <>
+    <NavLobby></NavLobby>
     <Nav justify variant="tabs" defaultActiveKey="/home">
       <Nav.Item>
         <Nav.Link eventKey="link-3" onClick={()=>cambiarMain('registro')}>Registrar gasto</Nav.Link>

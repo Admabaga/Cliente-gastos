@@ -1,15 +1,17 @@
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import axios from 'axios';
 import Button from 'react-bootstrap/Button';
 import Spinner from 'react-bootstrap/Spinner';
 import GastoCards from './GastoCards';
+import userContext from './Contexto/userContext';
 
 export default function VerGastos() {
     const [gastos, setGastos] = useState([]);
     const [cargando, setCargando] = useState(true);
     const [respuesta, setRespuesta] = useState('');
     const [respuestaError, setRespuestaError] = useState(false);
+    const {usuarioId} = useContext(userContext)
 
     useEffect(() => {
         traerGastos();
@@ -18,7 +20,7 @@ export default function VerGastos() {
     const traerGastos = async () => {
         setCargando(true);
         try {
-            const response = await axios.get('http://localhost:8000/gastos');
+            const response = await axios.get(`http://localhost:8000/gastos`);
             if (Array.isArray(response.data)) {
                 setGastos(response.data);
             } else {

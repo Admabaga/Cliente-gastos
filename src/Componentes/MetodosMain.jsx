@@ -2,7 +2,7 @@ import FormularioMetodosPago from "./FormularioLogin"
 import VerMetodos from "./VerMetodos"
 import Nav from 'react-bootstrap/Nav'
 import { useState } from 'react'
-
+import NavLobby from "./LobbyNav"
 export default function MetodosMain(){
     const [infoMain, setInfoMain] = useState('')
     const cambiarMain = (valor)=>{
@@ -10,6 +10,7 @@ export default function MetodosMain(){
     }
   return (
     <>
+    <NavLobby></NavLobby>
     <Nav justify variant="tabs" defaultActiveKey="/home">
       <Nav.Item>
         <Nav.Link eventKey="link-3" onClick={()=>cambiarMain('registro')}>Registrar metodo</Nav.Link>

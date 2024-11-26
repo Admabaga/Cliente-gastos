@@ -13,7 +13,7 @@ function NavLobby(){
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
         <Nav className="me-auto">
-            <Nav.Link href="/">Inicio</Nav.Link>
+            <Nav.Link href="/lobby">Inicio</Nav.Link>
             <Nav.Link href="/lobby/metodoPagos">Metodos de pago</Nav.Link>
             <Nav.Link href="/lobby/gastos">Gastos</Nav.Link>
           </Nav>
