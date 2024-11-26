@@ -21,7 +21,7 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route path='/' element={<Banner />}></Route>
-            <Route path='/usuarios' element={<FormularioRegistro />}></Route>
+            <Route path='/registro' element={<FormularioRegistro />}></Route>
             <Route path='/login' element={<Home />}></Route>
             <Route path='/lobby/gastos' element={<GastosMain />}></Route>
             <Route path='/lobby/metodoPagos' element={<MetodosMain />}></Route>
